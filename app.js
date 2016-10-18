@@ -31,8 +31,8 @@ var app = express();
 /* View engine config: */
 
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlerbars', exphbs({ defaultLayout: 'layout' }));
-app.set('view engine', 'handlerbars');
+app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+app.set('view engine', 'handlebars');
 
 
 /* Body parser middleware config: */
@@ -44,7 +44,7 @@ app.use(cookieParser());
 
 /* Set static folder: */
 
-app.use(express.static(path.join(___dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 /* Express session config: */
